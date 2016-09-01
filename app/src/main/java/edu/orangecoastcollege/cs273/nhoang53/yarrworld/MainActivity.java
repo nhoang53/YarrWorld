@@ -30,5 +30,6 @@ public class MainActivity extends AppCompatActivity {
         // Hook up the speakButton to the one in our view: R.id mean Resource
         speakBttButton = (Button) findViewById(R.id.speakButton);
 
+
     }
 }
