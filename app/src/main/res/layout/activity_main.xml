@@ -21,15 +21,15 @@
         android:gravity="center"
         android:textSize="40sp"
         android:textColor="@color/occ_blue"
-        android:layout_weight="1" />
+        android:layout_weight="0" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/prirateImageView"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/occpirate"
-        android:layout_weight="2" />
+        android:src="@drawable/occpirate_edited"
+        android:layout_weight="10" />
 
     <Button
         android:layout_width="wrap_content"
@@ -37,5 +37,5 @@
         android:text="@string/button_test"
         android:id="@+id/speakButton"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1" />
+        android:layout_weight="0" />
 </LinearLayout>

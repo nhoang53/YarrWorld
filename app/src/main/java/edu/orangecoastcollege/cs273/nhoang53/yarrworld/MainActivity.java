@@ -3,7 +3,9 @@ package edu.orangecoastcollege.cs273.nhoang53.yarrworld;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -12,7 +14,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class MainActivity extends AppCompatActivity {
 
     // Define the button as an instance variable (member variable)
-    Button speakBttButton;
+    private Button speakButton;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -28,8 +30,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Hook up the speakButton to the one in our view: R.id mean Resource
-        speakBttButton = (Button) findViewById(R.id.speakButton);
+        speakButton = (Button) findViewById(R.id.speakButton);
+        speakButton.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this, R.string.toast_text, Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }
