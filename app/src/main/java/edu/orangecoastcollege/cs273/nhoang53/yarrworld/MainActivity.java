@@ -1,10 +1,12 @@
 package edu.orangecoastcollege.cs273.nhoang53.yarrworld;
 
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Define the button as an instance variable (member variable)
     private Button speakButton;
+    // private TextView helloTextView;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -38,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, R.string.toast_text, Toast.LENGTH_SHORT).show();
             }
         });
+
+        /*helloTextView = (TextView) findViewById(R.id.helloTextView);
+        helloTextView.setTextColor(Color.RED);*/
+
 
     }
 }
