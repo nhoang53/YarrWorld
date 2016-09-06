@@ -3,6 +3,6 @@
     <string name="button_test">SHIVER ME TIMBERS</string>
     <string name="toast_test">Yarr World</string>
     <string name="welcome_text">Welcome to CS273 - Mobile Application Development</string>
-    <string name="toast_text">Ha ha ha. I got it.</string> // new
-    <string name="hello_text">Test assign TextView.</string>
+    <string name="toast_text">Yarr World!</string>
+    <string name="content_description">OCC Pirate</string>
 </resources>

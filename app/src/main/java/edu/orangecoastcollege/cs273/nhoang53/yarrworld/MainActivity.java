@@ -1,23 +1,19 @@
 package edu.orangecoastcollege.cs273.nhoang53.yarrworld;
 
-import android.graphics.Color;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
 
     // Define the button as an instance variable (member variable)
     private Button speakButton;
-    // private TextView helloTextView;
+    private Context context = this;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -35,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Hook up the speakButton to the one in our view: R.id mean Resource
         speakButton = (Button) findViewById(R.id.speakButton);
-        speakButton.setOnClickListener(new View.OnClickListener(){
 
+        //wire up the speakButton to perform on onCLick event
+        speakButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Toast.makeText(MainActivity.this, R.string.toast_text, Toast.LENGTH_SHORT).show();
+                // Use the static reference to "Toast" to display the message:
+                // Toast = vanishes after set amount of time
+                // Dialog = requires user input
+
+                Toast.makeText(context, R.string.toast_text, Toast.LENGTH_LONG).show();
             }
         });
-
-        /*helloTextView = (TextView) findViewById(R.id.helloTextView);
-        helloTextView.setTextColor(Color.RED);*/
-
-
     }
 }
